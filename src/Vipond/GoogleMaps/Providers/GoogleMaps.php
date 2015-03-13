@@ -67,6 +67,10 @@ class GoogleMaps {
                 return sprintf('Over query limit: %s', $query);
             }
             
+            if ('ZERO_RESULTS' === $content->status) {
+            	return sprintf('empty result: %s', $query);
+            }
+            
             if (strpos($content, "Provided 'signature' is not valid for the provided client ID") !== false) {
                 return sprintf('Invalid client ID / API Key %s', $query);
             }
