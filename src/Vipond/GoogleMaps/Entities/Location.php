@@ -6,11 +6,14 @@ namespace Vipond\GoogleMaps\Entities;
  * Properties are named to match Google's format
  */
 class Location {
-
+    
+    protected $continent;
     protected $country;
     protected $administrative_area_level_1;
     protected $administrative_area_level_2;
     protected $administrative_area_level_3;
+    protected $administrative_area_level_4;
+    protected $administrative_area_level_5;
     protected $locality;
     protected $sublocality_level_1;
     protected $sublocality_level_2;
@@ -25,8 +28,10 @@ class Location {
     protected $subpremise;
     protected $premise;
     protected $intersection;
+    protected $postal_town;
     protected $postal_code;
     protected $postal_code_suffix;
+    protected $postal_code_prefix;
     
     // TODO: tweak logic on how to create formatted result set
     protected $point_of_interest;
